@@ -2029,8 +2029,6 @@ cOsd *cOsdProvider::NewOsd(int Left, int Top, uint Level)
         }
      return Osd;
      }
-  else
-     esyslog("ERROR: no OSD provider available - using dummy OSD!");
   return new cOsd(Left, Top, 999); // create a dummy cOsd, so that access won't result in a segfault
 }
 
