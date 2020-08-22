@@ -784,11 +784,7 @@ int main(int argc, char *argv[])
   Folders.Load(AddDirectory(ConfigDirectory, "folders.conf"));
   CamResponsesLoad(AddDirectory(ConfigDirectory, "camresponses.conf"), true);
 
-  if (!*cFont::GetFontFileName(Setup.FontOsd)) {
-     const char *msg = "no fonts available - OSD will not show any text!";
-     fprintf(stderr, "vdr: %s\n", msg);
-     esyslog("ERROR: %s", msg);
-     }
+
 
   // Recordings:
 
